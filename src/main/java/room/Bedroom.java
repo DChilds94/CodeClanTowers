@@ -1,5 +1,8 @@
 package room;
 
+import guest.Guest;
+import hotel.Hotel;
+
 public class Bedroom extends Room {
 
     private BedroomType roomType;
@@ -7,8 +10,7 @@ public class Bedroom extends Room {
     private int roomNumber;
 
 
-
-    public Bedroom(int roomNumber, BedroomType roomType){
+    public Bedroom(int roomNumber, BedroomType roomType) {
         super(roomType.getCapacity());
         this.roomNumber = roomNumber;
         this.price = roomType.getPrice();
@@ -28,14 +30,11 @@ public class Bedroom extends Room {
         return roomNumber;
     }
 
-    public int getCapacity(){
-        return roomType.getCapacity();
+    public void checkGuestIntoBedroom(Hotel hotel) {
+        Guest guest = hotel.removeGuest();
+        this.guestArrayList.add(guest);
     }
-
-//    public void checkGuestIntoBedroom(Hotel hotel){
-//        Guest guest = hotel.
-
-    }
+}
 
 
 

@@ -23,6 +23,7 @@ public class HotelTest {
         bedroom = new Bedroom(4, BedroomType.FOUR);
         conferenceRoom = new ConferenceRoom();
         dinningRoom = new DinningRoom();
+        hotel.checkIn(guest);
     }
 
     @Test
