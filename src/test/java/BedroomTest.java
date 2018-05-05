@@ -19,6 +19,7 @@ public class BedroomTest {
         bedroom = new Bedroom(1, BedroomType.SINGLE);
         guest = new Guest();
         hotel = new Hotel();
+        bedroom.checkGuestIntoBedroom(hotel);
     }
 
     @Test
@@ -50,6 +51,12 @@ public class BedroomTest {
         hotel.checkIn(guest);
         bedroom.checkGuestIntoBedroom(hotel);
         assertEquals(1, bedroom.guestCount());
-
     }
+
+//    @Test
+//    public void canCheckGuestOutFromBedroom(){
+//
+//        bedroom.checkGuestOutFromBedroom();
+//        assertEquals(0, bedroom.guestCount());
+//    }
 }

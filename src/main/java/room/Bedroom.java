@@ -32,8 +32,15 @@ public class Bedroom extends Room {
 
     public void checkGuestIntoBedroom(Hotel hotel) {
         Guest guest = hotel.removeGuest();
-        this.guestArrayList.add(guest);
+        guestArrayList.add(guest);
     }
+
+//    public Guest checkGuestOutFromBedroom(){
+//        return this.guestArrayList.remove(0);
+//    }
+
+
+
 }
 
 

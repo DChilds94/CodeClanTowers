@@ -21,7 +21,7 @@ public class HotelTest {
         hotel = new Hotel();
         guest = new Guest();
         bedroom = new Bedroom(4, BedroomType.FOUR);
-        conferenceRoom = new ConferenceRoom();
+        conferenceRoom = new ConferenceRoom(50, "Alpha", 500.00);
         dinningRoom = new DinningRoom();
         hotel.checkIn(guest);
     }

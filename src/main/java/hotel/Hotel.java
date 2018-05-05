@@ -33,7 +33,7 @@ public class Hotel {
     }
 
     public Guest removeGuest(){
-       return  this.guestForRoom.remove(0);
+       return this.guestForRoom.remove(0);
     }
 
 }
