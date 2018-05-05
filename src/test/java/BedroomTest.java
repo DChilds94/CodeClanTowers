@@ -39,4 +39,11 @@ public class BedroomTest {
     public void canGetGuest(){
         assertEquals(0, bedroom.guestCount());
     }
+
+//    @Test
+//    public void canCheckGuestIntoBedroom(){
+//        bedroom.checkGuestIntoBedroom();
+//        assertEquals(1, bedroom.guestCount());
+//
+//    }
 }

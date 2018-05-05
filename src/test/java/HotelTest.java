@@ -5,6 +5,7 @@ import org.junit.Test;
 import room.*;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class HotelTest {
 
@@ -29,5 +30,18 @@ public class HotelTest {
         hotel.checkIn(guest);
         assertEquals(1, hotel.guestCount());
     }
+    @Test
+    public void canCheckGuestOut(){
+        hotel.checkIn(guest);
+        hotel.checkOut();
+        assertEquals(0, hotel.guestCount());
+    }
+    @Test
+    public void canGetGuest(){
+        hotel.checkIn(guest);
+        Guest result = hotel.removeGuest();
+        assertNotNull(result);
+    }
+
 
 }

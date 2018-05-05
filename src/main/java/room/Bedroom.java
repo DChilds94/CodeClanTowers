@@ -32,7 +32,12 @@ public class Bedroom extends Room {
         return roomType.getCapacity();
     }
 
+//    public void checkGuestIntoBedroom(Hotel hotel){
+//        Guest guest = hotel.
+
+    }
 
 
 
-}
+
+
