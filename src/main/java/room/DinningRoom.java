@@ -1,4 +1,11 @@
 package room;
 
-public class DinningRoom {
+public class DinningRoom extends Room {
+
+    public DinningRoom(int capacity){
+        super(capacity);
+    }
+
+
+
 }

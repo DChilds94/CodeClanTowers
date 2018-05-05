@@ -22,7 +22,7 @@ public class HotelTest {
         guest = new Guest();
         bedroom = new Bedroom(4, BedroomType.FOUR);
         conferenceRoom = new ConferenceRoom(50, "Alpha", 500.00);
-        dinningRoom = new DinningRoom();
+        dinningRoom = new DinningRoom(200);
         hotel.checkIn(guest);
     }
 
