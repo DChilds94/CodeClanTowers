@@ -11,7 +11,6 @@ public class HotelTest {
 
     Hotel hotel;
     Guest guest;
-    Room room;
     Bedroom bedroom;
     ConferenceRoom conferenceRoom;
     DinningRoom dinningRoom;
@@ -44,20 +43,12 @@ public class HotelTest {
         Guest result = hotel.removeGuest();
         assertNotNull(result);
     }
-////    @Test
-////    public void canCheckBedroomForGuests(){
-////        hotel.checkIn(guest);
-////        bedroom.checkGuestIntoBedroom(hotel);
-////        bedroom.guestCount();
-////        assertEquals(1, hotel.checkBedroomForGuests());
-////    }
-
-//    @Test
-//    public void canCountGuestsInBedroom(){
-//        assertEquals(1, hotel.totalGuestsInRoom());
-//    }
-
-
-
+    @Test
+    public void canCheckBedroomForGuests(){
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        bedroom.guestCount();
+        assertEquals(1, bedroom.guestCount());
+    }
 
 }

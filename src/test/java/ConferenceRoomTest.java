@@ -47,7 +47,7 @@ public class ConferenceRoomTest {
     }
 
     @Test
-    public void canCheckGuestOutFromConferenceroom(){
+    public void canCheckGuestOutFromConferenceRoom(){
         hotel.checkIn(guest);
         conferenceRoom.checkGuestIntoRoom(hotel);
         conferenceRoom.checkGuestOutFromRoom();

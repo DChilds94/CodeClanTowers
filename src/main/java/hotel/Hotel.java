@@ -2,6 +2,8 @@ package hotel;
 
 import guest.Guest;
 import room.Bedroom;
+import room.ConferenceRoom;
+import room.DinningRoom;
 
 import java.util.ArrayList;
 
@@ -11,15 +13,15 @@ public class Hotel {
 
     private ArrayList<Guest> guestForRoom;
     private ArrayList<Bedroom> bedroom;
-//    private ArrayList<ConferenceRoom> conferenceRoom;
-//    private ArrayList<DinningRoom> dinningRoom;
+    private ArrayList<ConferenceRoom> conferenceRoom;
+    private ArrayList<DinningRoom> dinningRoom;
 
 
     public Hotel(){
         this.guestForRoom = new ArrayList<>();
         this.bedroom = new ArrayList<>();
-//        this.conferenceRoom = new ArrayList<>();
-//        this.dinningRoom = new ArrayList<>();
+        this.conferenceRoom = new ArrayList<>();
+        this.dinningRoom = new ArrayList<>();
     }
 
     public int guestCount(){
@@ -29,7 +31,7 @@ public class Hotel {
         this.guestForRoom.add(guest);
     }
 
-    public int checkBedroomForGuests(){
+    public int checkRoomForGuests(){
         return this.bedroom.size();
     }
 
@@ -40,9 +42,9 @@ public class Hotel {
     public Guest removeGuest(){
        return this.guestForRoom.remove(0);
     }
-//    public Guest totalGuestsInRoom(Bedroom bedroom){
-//
-//        return this.guestCount();
-//    }
+    public int totalGuestsInRoom(Bedroom bedroom){
+
+        return this.guestCount();
+    }
 
 }

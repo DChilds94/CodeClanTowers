@@ -28,6 +28,7 @@ public abstract class Room {
         Guest guest;
         guest = hotel.removeGuest();
         guestArrayList.add(guest);
+
     }
     public void checkGuestOutFromRoom(){
         this.guestArrayList.clear();
