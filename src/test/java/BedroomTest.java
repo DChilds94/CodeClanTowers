@@ -49,15 +49,15 @@ public class BedroomTest {
     @Test
     public void canCheckGuestIntoBedroom() {
         hotel.checkIn(guest);
-        bedroom.checkGuestIntoBedroom(hotel);
+        bedroom.checkGuestIntoRoom(hotel);
         assertEquals(1, bedroom.guestCount());
     }
 
     @Test
     public void canCheckGuestOutFromBedroom(){
         hotel.checkIn(guest);
-        bedroom.checkGuestIntoBedroom(hotel);
-        bedroom.checkGuestOutFromBedroom();
+        bedroom.checkGuestIntoRoom(hotel);
+        bedroom.checkGuestOutFromRoom();
         assertEquals(0, bedroom.guestCount());
     }
 }

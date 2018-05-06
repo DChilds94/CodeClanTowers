@@ -23,7 +23,8 @@ public class HotelTest {
         bedroom = new Bedroom(4, BedroomType.FOUR);
         conferenceRoom = new ConferenceRoom(50, "Alpha", 500.00);
         dinningRoom = new DinningRoom(200);
-        hotel.checkIn(guest);
+
+
     }
 
     @Test
@@ -43,6 +44,20 @@ public class HotelTest {
         Guest result = hotel.removeGuest();
         assertNotNull(result);
     }
+////    @Test
+////    public void canCheckBedroomForGuests(){
+////        hotel.checkIn(guest);
+////        bedroom.checkGuestIntoBedroom(hotel);
+////        bedroom.guestCount();
+////        assertEquals(1, hotel.checkBedroomForGuests());
+////    }
+
+//    @Test
+//    public void canCountGuestsInBedroom(){
+//        assertEquals(1, hotel.totalGuestsInRoom());
+//    }
+
+
 
 
 }

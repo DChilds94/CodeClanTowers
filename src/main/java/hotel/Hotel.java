@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Hotel {
 
     Hotel hotel;
+
     private ArrayList<Guest> guestForRoom;
     private ArrayList<Bedroom> bedroom;
 //    private ArrayList<ConferenceRoom> conferenceRoom;
@@ -28,6 +29,10 @@ public class Hotel {
         this.guestForRoom.add(guest);
     }
 
+    public int checkBedroomForGuests(){
+        return this.bedroom.size();
+    }
+
     public void checkOut(){
         this.guestForRoom.remove(0);
     }
@@ -35,5 +40,9 @@ public class Hotel {
     public Guest removeGuest(){
        return this.guestForRoom.remove(0);
     }
+//    public Guest totalGuestsInRoom(Bedroom bedroom){
+//
+//        return this.guestCount();
+//    }
 
 }

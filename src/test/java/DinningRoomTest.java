@@ -28,4 +28,19 @@ public class DinningRoomTest {
     public void canGetGuest(){
         assertEquals(0, dinningRoom.guestCount());
     }
+
+    @Test
+    public void canCheckGuestIntoDinningRoom() {
+        hotel.checkIn(guest);
+        dinningRoom.checkGuestIntoRoom(hotel);
+        assertEquals(1, dinningRoom.guestCount());
+    }
+
+    @Test
+    public void canCheckGuestOutFromDinningRoom(){
+        hotel.checkIn(guest);
+        dinningRoom.checkGuestIntoRoom(hotel);
+        dinningRoom.checkGuestOutFromRoom();
+        assertEquals(0,dinningRoom.guestCount());
+    }
 }
