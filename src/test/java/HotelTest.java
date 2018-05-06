@@ -47,8 +47,28 @@ public class HotelTest {
     public void canCheckBedroomForGuests(){
         hotel.checkIn(guest);
         bedroom.checkGuestIntoRoom(hotel);
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
         bedroom.guestCount();
-        assertEquals(1, bedroom.guestCount());
+        assertEquals(3, bedroom.guestCount());
     }
+
+    @Test
+    public void cannotCheckGuestIntoBedroomAsFull(){
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        hotel.checkIn(guest);
+        bedroom.checkGuestIntoRoom(hotel);
+        assertEquals(4, bedroom.guestCount());
+    }
+
 
 }

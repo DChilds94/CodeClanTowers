@@ -25,9 +25,10 @@ public abstract class Room {
     }
 
     public void checkGuestIntoRoom(Hotel hotel) {
-        Guest guest;
-        guest = hotel.removeGuest();
-        guestArrayList.add(guest);
+        if (guestCount() < getCapacity()) {
+            Guest guest = hotel.removeGuest();
+            guestArrayList.add(guest);
+        }
 
     }
     public void checkGuestOutFromRoom(){
